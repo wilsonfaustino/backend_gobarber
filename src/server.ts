@@ -34,4 +34,5 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
 
 app.listen(3333, () => {
   console.log('🔥🔥🔥 Tá de boa :3 🔥🔥🔥');
+  console.log('***** O PAI TA ON *****');
 });
