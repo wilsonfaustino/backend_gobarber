@@ -3,11 +3,12 @@ import 'reflect-metadata';
 import express, { Request, Response, NextFunction } from 'express';
 import 'express-async-errors';
 import cors from 'cors';
-import routes from './routes';
-import uploadConfig from './config/upload';
-import AppError from './errors/AppError';
 
-import './database';
+import routes from '@shared/infra/http/routes';
+import uploadConfig from '@config/upload';
+import AppError from '@shared/errors/AppError';
+
+import '@shared/infra/typeorm';
 
 const app = express();
 
@@ -34,5 +35,5 @@ app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
 
 app.listen(3333, () => {
   console.log('🔥🔥🔥 Tá de boa :3 🔥🔥🔥');
-  console.log('***** O PAI TA ON *****');
+  console.log('⚡️⚡️⚡️ O PAI TA ON ⚡️⚡️⚡️');
 });
